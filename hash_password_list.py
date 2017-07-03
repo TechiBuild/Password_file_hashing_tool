@@ -73,7 +73,7 @@ def path_collect():
     return full_path_txt_file, path_to_scan
 
 
-def hash_list_creation():
+if __name__ == "__main__":
     path_tuple = path_collect()
 
     directory_scan(path_tuple[1])
@@ -82,6 +82,3 @@ def hash_list_creation():
         grab_hash(path)  # Get's the hashes of the files inside the directory entered
 
     save_to_txt(path_tuple[0])  # Saves hashes to a txt file TODO NEEDS TO CHECK PERMISSIONS BEFORE HASHING
-
-
-hash_list_creation()
